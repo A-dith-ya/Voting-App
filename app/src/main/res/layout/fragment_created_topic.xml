@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/rounded_teal_button"
+    app:circularflow_radiusInDP="20dp">
+
+        <TextView
+            android:id="@+id/voting_topic_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voting Topic"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/voting_topic_options_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:text="Information"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/voting_topic_date_creation_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="10dp"
+            android:text="Created On"
+            android:textColor="#FFFFFF"
+            android:textStyle="italic" />
+
+        <ImageButton
+            android:id="@+id/voting_topic_dashboard_imgbtn"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/pie_chart" />
+
+
+        <Button
+            android:id="@+id/voting_topic_delete_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="15dp"
+            android:text="\u2717"
+            app:backgroundTint="#F44336" />
+
+
+</RelativeLayout>
+
+

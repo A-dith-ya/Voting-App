@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_and_signup_background"
+    tools:context=".RegisterActivity">
+
+    <Button
+        android:id="@+id/register_go_back_login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedbutton"
+        android:onClick="changeScreen"
+        android:rotation="180"
+        android:text="\u279C"
+        android:textSize="20sp"
+        app:backgroundTint="#00BCD4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_username_il"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:boxBackgroundMode="none"
+        app:boxStrokeColor="@color/Red"
+        app:errorEnabled="true"
+        app:errorIconDrawable="@drawable/error_img"
+        app:errorTextAppearance="@color/Red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.278"
+        app:startIconDrawable="@drawable/profile_img">
+
+        <EditText
+            android:id="@+id/register_username_tv"
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/roundedbutton"
+            android:ems="10"
+            android:hint="User Name"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_pass_il"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/black"
+        app:boxBackgroundMode="none"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:errorEnabled="true"
+        app:helperText="Character Count"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_username_il"
+        app:layout_constraintVertical_bias="0.077"
+        app:passwordToggleDrawable="@drawable/show_password_img"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/pass_key">
+        <EditText
+            android:id="@+id/register_user_pass_tv"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundedbutton"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/register_user_role_rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_pass_il"
+        app:layout_constraintVertical_bias="0.189">
+
+        <RadioButton
+            android:id="@+id/register_user_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Voter"
+            tools:layout_editor_absoluteX="91dp"
+            tools:layout_editor_absoluteY="426dp" />
+
+        <RadioButton
+            android:id="@+id/register_manager_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manager"
+            tools:layout_editor_absoluteX="91dp"
+            tools:layout_editor_absoluteY="474dp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/register_create_account_btn"
+        android:layout_width="163dp"
+        android:layout_height="45dp"
+        android:background="@drawable/roundedbutton"
+        android:onClick="checkRole"
+        android:text="Register"
+        app:backgroundTint="#45DD4B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.825" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

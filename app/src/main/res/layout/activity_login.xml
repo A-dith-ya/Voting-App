@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_and_signup_background"
+    tools:context=".LoginActivity">
+
+    <Button
+        android:id="@+id/login_go_register_btn"
+        android:layout_width="251dp"
+        android:layout_height="40dp"
+        android:background="@drawable/roundedbutton"
+        android:onClick="changeScreen"
+        android:text="@string/go_register_screen"
+        app:backgroundTint="#00BCD4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.806" />
+
+    <Button
+        android:id="@+id/login_go_user_screen"
+        android:layout_width="251dp"
+        android:layout_height="40dp"
+        android:background="@drawable/roundedbutton"
+        android:fadingEdge="horizontal"
+        android:onClick="userScreen"
+        android:text="Login"
+        app:backgroundTint="#00BCD4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.704" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_username_il"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:boxBackgroundMode="none"
+        app:boxStrokeColor="@color/Red"
+        app:errorEnabled="true"
+        app:errorIconDrawable="@drawable/error_img"
+        app:errorTextAppearance="@color/Red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.306"
+        app:startIconDrawable="@drawable/profile_img">
+
+        <EditText
+            android:id="@+id/login_username_tv"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundedbutton"
+            android:ems="10"
+            android:hint="User Name"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_pass_il"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:minWidth="88dp"
+        android:textColorHint="@color/Silver"
+
+        app:backgroundTint="@android:color/black"
+
+
+        app:boxBackgroundMode="none"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@color/Red"
+        app:helperTextEnabled="true"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.504"
+        app:passwordToggleDrawable="@drawable/show_password_img"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/pass_key">
+
+        <EditText
+            android:id="@+id/login_userpass_tv"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundedbutton"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:minHeight="48dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:layout_width="418dp"
+        android:layout_height="132dp"
+        android:background="@drawable/roundedbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/thompson_rivers_university" />
+
+    <ImageView
+        android:id="@+id/login_holder_top_right_tv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:rotation="180"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.778"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        app:srcCompat="@drawable/popper" />
+
+    <ImageView
+        android:id="@+id/login_holder_top_left_tv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:rotation="90"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        app:srcCompat="@drawable/popper" />
+
+    <TextView
+        android:layout_width="135dp"
+        android:layout_height="68dp"
+        android:text="Online Voting System"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
